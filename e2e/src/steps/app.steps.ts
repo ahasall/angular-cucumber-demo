@@ -1,22 +1,20 @@
-import { Given } from 'cucumber';
+import { Before, Given, Then, When } from 'cucumber';
+import { expect } from 'chai';
 
-const { expect } = require('chai');
 import { AppPage } from '../pages/app.po';
 
-export default function() {
-  let page: AppPage;
-  this.Before(() => {
-    page = new AppPage();
-  });
-  Given('I am on the home page', function() {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-  });
+let page: AppPage;
 
-  this.When(/^I do nothing$/, () => console.log('doing nothing'));
+Before(() => {
+  page = new AppPage();
+});
 
-  this.Then(/^I should see the title$/, async () => {
-    console.log(page);
-    expect(await page.getTitleText()).to.equal('amadousall.com');
-  });
-}
+Given(/^I am on the home page$/, async () => {
+  await page.navigateTo();
+});
+
+When(/^I do nothing$/, () => {});
+
+Then(/^I should see the title$/, async () => {
+  expect(await page.getTitleText()).to.equal('Welcome to angular-cli-cucumber-demo!');
+});

@@ -18,9 +18,5 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
-    browser
-      .manage()
-      .window()
-      .maximize(); // maximize the browser before executing the feature files
   }
 };
