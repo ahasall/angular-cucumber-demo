@@ -19,7 +19,12 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@types/chai": "^4.1.7",
+    "@types/cucumber": "^4.0.4",
+    "chai": "^4.2.0",
     "core-js": "^2.5.4",
+    "cucumber": "^5.0.3",
+    "protractor-cucumber-framework": "^6.1.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
