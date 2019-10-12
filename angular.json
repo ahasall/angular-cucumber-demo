@@ -118,6 +118,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-cli-cucumber-demo"
+    }
+  },
+  "defaultProject": "angular-cli-cucumber-demo",
+  "cli": {
+    "packageManager": "npm"
+  }
 }
